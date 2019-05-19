@@ -1,0 +1,39 @@
+.menu,
+table.menu {
+	&--custom {
+		width: 100%;
+	}
+	> tbody > tr > td > table {
+		margin: 0 auto;
+	}
+
+	&__item {
+		&--highlighted {
+			color: $radical-red;
+
+			a {
+				color: $radical-red  !important;
+
+				&:visited {
+					color: $radical-red !important;
+				}
+			}
+		}
+
+		a {
+			line-height: (14 / 17);
+		}
+	}
+
+	@media (max-width: $global-breakpoint) {
+		display: none;
+	}
+}
+
+.container {
+	&--menu {
+		@media (max-width: $global-breakpoint) {
+			display: none;
+		}
+	}
+}

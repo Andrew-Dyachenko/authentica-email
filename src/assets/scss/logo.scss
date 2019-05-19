@@ -1,0 +1,30 @@
+.logo {
+	&__top,
+	&__bottom {
+		color: $black;
+		font-size: 35px;
+		letter-spacing: -.7px;
+		line-height: (27 / 35);
+		white-space: nowrap;
+		overflow: hidden;
+
+		@media (max-width: $s) {
+			display: inline-block;;
+		}
+	}
+
+	&__bottom {
+		color: $radical-red;
+	}
+
+	&__spacer {
+		@media (max-width: $s) {
+			display: none;
+		}
+	}
+
+	@media (max-width: $s) {
+		text-align: center;
+		line-height: (27 / 35);
+	}
+}

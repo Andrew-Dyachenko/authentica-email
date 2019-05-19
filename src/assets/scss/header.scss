@@ -1,0 +1,37 @@
+.header {
+	width: 100%;
+	table-layout: fixed;
+
+	&__cell {
+		&--logo,
+		&--phones {
+			vertical-align: middle;
+
+			@media (max-width: $s) {
+				display: block;
+				width: 100% !important;
+			}
+		}
+
+		&--logo {
+			width: 55%;
+		}
+
+		&--phones {
+			width: 45%;
+			text-align: right;
+
+			@media (max-width: $s) {
+				text-align: left;
+			}
+		}
+
+		&--padding {
+			display: none;
+
+			@media (max-width: $s) {
+				display: block;
+			}
+		}
+	}
+}

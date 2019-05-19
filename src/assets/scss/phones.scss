@@ -1,0 +1,12 @@
+.phones {
+	&__item {
+		@media (max-width: $s) {
+			text-align: center;
+		}
+	}
+	&__link {
+		color: $dusty-gray;
+		text-decoration: none;
+		letter-spacing: -.3px;
+	}
+}

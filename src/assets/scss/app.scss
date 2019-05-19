@@ -1,4 +1,11 @@
 @import 'settings';
 @import 'foundation-emails';
 
-@import 'template/template';
+@import 'authentica-hero';
+
+%blank {
+	display: block;
+	height: 1px;
+	width: 1px;
+	max-width: none;
+}
