@@ -1,16 +1,9 @@
-@import './mix/fonts';
-@import './container-addon.scss';
-@import './header';
-@import './logo';
-@import './phones';
-@import './hr';
-@import './menu';
-@import './forehead';
+@import '../mix/fonts';
 
 // ----------  Fonts config  ----------
 
 $font-name: 'PF Agora Sans Pro';
-$font-path: '../fonts/PFAgoraSansPro/';
+$font-path: '../assets/fonts/PFAgoraSansPro/';
 
 // ----------  Roboto  ----------
 
@@ -37,3 +30,12 @@ $font-path: '../fonts/PFAgoraSansPro/';
 
 @include font-face($font-name, 'PF Agora Sans Pro Ultra Black Italic', 'PFAgoraSansPro-UltraBlackItalic', '#{$font-path}PFAgoraSansPro-UltraBlackItalic', italic, 900);
 @include font-face($font-name, 'PF Agora Sans Pro Ultra Black',        'PFAgoraSansPro-UltraBlack',       '#{$font-path}PFAgoraSansPro-UltraBlack',       normal, 900);
+
+@import './container-addon.scss';
+@import './header';
+@import './logo';
+@import './phones';
+@import './hr';
+@import './menu';
+@import './forehead';
+@import './banner';

@@ -1,11 +1,17 @@
 @import 'settings';
 @import 'foundation-emails';
 
-@import 'authentica-hero';
+@import 'authentica-hero/authentica-hero';
 
 %blank {
 	display: block;
 	height: 1px;
 	width: 1px;
 	max-width: none;
+}
+
+%l-visible {
+	@media (max-width: $global-breakpoint) {
+		display: none;
+	}
 }

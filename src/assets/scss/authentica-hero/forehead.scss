@@ -14,4 +14,15 @@
 			font-weight: 700;
 		}
 	}
+
+	&__text {
+		text-align: center;
+		margin: 0;
+		letter-spacing: 2px;
+		line-height: (17 / 14);
+	}
+
+	&__br {
+		@extend %l-visible;
+	}
 }
