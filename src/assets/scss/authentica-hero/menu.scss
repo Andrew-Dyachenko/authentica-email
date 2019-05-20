@@ -2,9 +2,9 @@
 table.menu {
 	&--custom {
 		width: 100%;
-	}
-	> tbody > tr > td > table {
-		margin: 0 auto;
+		table {
+			margin: 0 auto !important;
+		}
 	}
 
 	&__item {
@@ -27,13 +27,5 @@ table.menu {
 
 	@media (max-width: $global-breakpoint) {
 		display: none;
-	}
-}
-
-.container {
-	&--menu {
-		@media (max-width: $global-breakpoint) {
-			display: none;
-		}
 	}
 }

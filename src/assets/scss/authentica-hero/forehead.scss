@@ -8,18 +8,26 @@
 		letter-spacing: 2px;
 		text-transform: uppercase;
 		color: $radical-red;
-		margin: 0;
+		margin: 0 !important;
 
 		strong {
+			font-size: inherit;
 			font-weight: 700;
+		}
+
+		@media (max-width: $global-breakpoint) {
+			font-size: ((15 + 25) / 2) + px !important;
+			font-size: calc(0.9375rem + ((1vw - 3.6px) * 3.6765)) !important;
+		}
+
+		@media (max-width: $s) {
+			font-size: 15px !important;
 		}
 	}
 
 	&__text {
+		@extend %text;
 		text-align: center;
-		margin: 0;
-		letter-spacing: 2px;
-		line-height: (17 / 14);
 	}
 
 	&__br {

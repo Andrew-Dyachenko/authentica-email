@@ -20,17 +20,13 @@
 		&--phones {
 			width: 45%;
 			text-align: right;
-
-			@media (max-width: $s) {
-				text-align: left;
-			}
 		}
 
 		&--padding {
 			display: none;
 
 			@media (max-width: $s) {
-				display: block;
+				display: block !important;
 			}
 		}
 	}

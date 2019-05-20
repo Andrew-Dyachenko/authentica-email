@@ -1,0 +1,36 @@
+.container {
+	$container: &;
+	&-addon {
+		width: 100%;
+		&__blank {
+			@extend %blank;
+			width: 30px !important;
+
+			@media (max-width: $global-breakpoint) {
+				height: 1px !important;
+			}
+		}
+
+		&__cell {
+			width: 100%;
+			&:first-child,
+			&:last-child {
+				width: 30px;
+				vertical-align: middle;
+			}
+		}
+	}
+	&--menu {
+		@media (max-width: $global-breakpoint) {
+			display: none;
+		}
+	}
+	&--products {
+		#{$container}-addon {
+			width: 100%;
+			&__blank {
+				width: 15px !important;
+			}
+		}
+	}
+}

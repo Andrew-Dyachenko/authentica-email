@@ -1,0 +1,41 @@
+.products {
+	&__media {
+		th {
+			vertical-align: middle;
+			text-align: center !important;
+			height: 236px;
+		}
+
+		&-link {
+			display: inline-block;
+			vertical-align: middle;
+		}
+
+		&-image {
+			display: block;
+		}
+	}
+
+	&__name {
+		white-space: nowrap;
+		overflow: hidden;
+		text-overflow: ellipsis;
+		line-height: (17 / 14);
+
+		&-link {
+			color: $sandal;
+		}
+	}
+
+	&__shortsay {
+		color: $black;
+		font-size: 14px;
+		line-height: (17 / 14);
+	}
+
+	&__infoblock {
+		> table {
+			table-layout: fixed;
+		}
+	}
+}
