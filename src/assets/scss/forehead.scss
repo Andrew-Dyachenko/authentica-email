@@ -1,0 +1,17 @@
+.forehead {
+	&__title {
+		font-weight: 400;
+		font-family: $body-font-family;
+		font-size: 25px;
+		line-height: (30 / 25);
+		text-align: center;
+		letter-spacing: 2px;
+		text-transform: uppercase;
+		color: $radical-red;
+		margin: 0;
+
+		strong {
+			font-weight: 700;
+		}
+	}
+}

@@ -20,7 +20,7 @@ $radical-red: #FE4A5B;
 $alto: #E0E0E0;
 $dusty-gray: #989797;
 $container-padding: 30px;
-$s: 360px;
+$s: 360px - 1;
 
 // 1. Global
 // ---------
@@ -45,7 +45,7 @@ $global-padding: 16px;
 $global-margin: 16px;
 $global-radius: 3px;
 $global-rounded: 500px;
-$global-breakpoint: $global-width - 1;
+$global-breakpoint: ($global-width + $global-padding * 2) - 1;
 
 // 2. Grid
 // -------
@@ -140,7 +140,7 @@ $callout-border-alert: 1px solid darken($alert-color, 20%);
 // 7. Menu
 // -------
 
-$menu-item-padding: 15px;
+$menu-item-padding: 17px;
 $menu-item-gutter: 15px;
 $menu-item-color: $black;
 

@@ -1,48 +1,39 @@
-@font-face {
-	font-family: 'PF Agora Sans Pro';
-	font-style: normal;
-	font-weight: 400;
-	src: url('https://nomail.com.ua/files/eot/d8c70beda312c3edc49616eb30e3eddf.eot');
-	src: local('PF Agora Sans Pro'), local('PFAgoraSansPro'),
-		url('https://nomail.com.ua/files/eot/d8c70beda312c3edc49616eb30e3eddf.eot?#iefix') format('embedded-opentype'),
-		url('https://nomail.com.ua/files/woff/d8c70beda312c3edc49616eb30e3eddf.woff') format('woff'),
-		url('https://nomail.com.ua/files/woff2/d8c70beda312c3edc49616eb30e3eddf.woff2') format('woff2');
-}
-@font-face {
-	font-family: 'PF Agora Sans Pro';
-	font-style: italic;
-	font-weight: 400;
-	src: url('https://nomail.com.ua/files/eot/f56e8e0dba303743306d774196634d78.eot');
-	src: local('PF Agora Sans Pro'), local('PFAgoraSansPro'),
-		url('https://nomail.com.ua/files/eot/f56e8e0dba303743306d774196634d78.eot?#iefix') format('embedded-opentype'),
-		url('https://nomail.com.ua/files/woff/f56e8e0dba303743306d774196634d78.woff') format('woff'),
-		url('https://nomail.com.ua/files/woff2/f56e8e0dba303743306d774196634d78.woff2') format('woff2');
-}
-@font-face {
-	font-family: 'PF Agora Sans Pro';
-	font-style: normal;
-	font-weight: 700;
-	src: url('https://nomail.com.ua/files/eot/db7576c2bea2b20e5e68e19d35c64f1e.eot');
-	src: local('PF Agora Sans Pro'), local('PFAgoraSansPro'),
-		url('https://nomail.com.ua/files/eot/db7576c2bea2b20e5e68e19d35c64f1e.eot?#iefix') format('embedded-opentype'),
-		url('https://nomail.com.ua/files/woff/db7576c2bea2b20e5e68e19d35c64f1e.woff') format('woff'),
-		url('https://nomail.com.ua/files/woff2/db7576c2bea2b20e5e68e19d35c64f1e.woff2') format('woff2');
-}
-@font-face {
-	font-family: 'PF Agora Sans Pro';
-	font-style: italic;
-	font-weight: 700;
-	src: url('https://nomail.com.ua/files/eot/37dd0c52b395784cd28a63104580946d.eot');
-	src: local('PF Agora Sans Pro'), local('PFAgoraSansPro'),
-		url('https://nomail.com.ua/files/eot/37dd0c52b395784cd28a63104580946d.eot?#iefix') format('embedded-opentype'),
-		url('https://nomail.com.ua/files/woff/37dd0c52b395784cd28a63104580946d.woff') format('woff'),
-		url('https://nomail.com.ua/files/woff2/37dd0c52b395784cd28a63104580946d.woff2') format('woff2');
-}
-
-
+@import './mix/fonts';
 @import './container-addon.scss';
 @import './header';
 @import './logo';
 @import './phones';
 @import './hr';
 @import './menu';
+@import './forehead';
+
+// ----------  Fonts config  ----------
+
+$font-name: 'PF Agora Sans Pro';
+$font-path: '../fonts/PFAgoraSansPro/';
+
+// ----------  Roboto  ----------
+
+@include font-face($font-name, 'PF Agora Sans Pro XThin Italic',       'PFAgoraSansPro-XThinItalic',      '#{$font-path}PFAgoraSansPro-XThinItalic',      italic, 100);
+@include font-face($font-name, 'PF Agora Sans Pro XThin',              'PFAgoraSansPro-XThin',            '#{$font-path}PFAgoraSansPro-XThin',            normal, 100);
+
+@include font-face($font-name, 'PF Agora Sans Pro Thin Italic',        'PFAgoraSansPro-ThinItalic',       '#{$font-path}PFAgoraSansPro-ThinItalic',       italic, 200);
+@include font-face($font-name, 'PF Agora Sans Pro Thin',               'PFAgoraSansPro-Thin',             '#{$font-path}PFAgoraSansPro-Thin',             normal, 200);
+
+@include font-face($font-name, 'PF Agora Sans Pro Light Italic',       'PFAgoraSansPro-LightItalic',      '#{$font-path}PFAgoraSansPro-LightItalic',      italic, 300);
+@include font-face($font-name, 'PF Agora Sans Pro Light',              'PFAgoraSansPro-Light',            '#{$font-path}PFAgoraSansPro-Light',            normal, 300);
+
+@include font-face($font-name, 'PF Agora Sans Pro Italic',             'PFAgoraSansPro-Italic',           '#{$font-path}PFAgoraSansPro-Italic',           italic, 400);
+@include font-face($font-name, 'PF Agora Sans Pro Regular',            'PFAgoraSansPro-Regular',          '#{$font-path}PFAgoraSansPro-Regular',          normal, 400);
+
+@include font-face($font-name, 'PF Agora Sans Pro Medium Italic',      'PFAgoraSansPro-MediumItalic',     '#{$font-path}PFAgoraSansPro-MediumItalic',     italic, 500);
+@include font-face($font-name, 'PF Agora Sans Pro Medium',             'PFAgoraSansPro-Medium',           '#{$font-path}PFAgoraSansPro-Medium',           normal, 500);
+
+@include font-face($font-name, 'PF Agora Sans Pro Bold Italic',        'PFAgoraSansPro-BoldItalic',       '#{$font-path}PFAgoraSansPro-BoldItalic',       italic, 700);
+@include font-face($font-name, 'PF Agora Sans Pro Bold',               'PFAgoraSansPro-Bold',             '#{$font-path}PFAgoraSansPro-Bold',             normal, 700);
+
+@include font-face($font-name, 'PF Agora Sans Pro Black Italic',       'PFAgoraSansPro-BlackItalic',      '#{$font-path}PFAgoraSansPro-BlackItalic',      italic, 800);
+@include font-face($font-name, 'PF Agora Sans Pro Black',              'PFAgoraSansPro-Black',            '#{$font-path}PFAgoraSansPro-Black',            normal, 800);
+
+@include font-face($font-name, 'PF Agora Sans Pro Ultra Black Italic', 'PFAgoraSansPro-UltraBlackItalic', '#{$font-path}PFAgoraSansPro-UltraBlackItalic', italic, 900);
+@include font-face($font-name, 'PF Agora Sans Pro Ultra Black',        'PFAgoraSansPro-UltraBlack',       '#{$font-path}PFAgoraSansPro-UltraBlack',       normal, 900);
