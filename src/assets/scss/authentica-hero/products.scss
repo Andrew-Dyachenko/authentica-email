@@ -17,20 +17,21 @@
 	}
 
 	&__name {
-		white-space: nowrap;
-		overflow: hidden;
-		text-overflow: ellipsis;
-		line-height: (17 / 14);
+		line-height: (16 / 14);
 
 		&-link {
 			color: $sandal;
+
+			&:visited {
+				color: $sandal;
+			}
 		}
 	}
 
 	&__shortsay {
 		color: $black;
 		font-size: 14px;
-		line-height: (17 / 14);
+		line-height: (16 / 14);
 	}
 
 	&__infoblock {
@@ -38,4 +39,29 @@
 			table-layout: fixed;
 		}
 	}
+
+	&__price {
+		color: $black;
+		letter-spacing: .3333px;
+	}
+
+	&__description {
+		color: $dusty-gray;
+		font-size: 12px;
+		line-height: (15 / 12);
+	}
+
+	&__action {
+		@extend %button;
+		margin-bottom: 0;
+		width: 210px;
+
+		@media (max-width: $global-breakpoint) {
+			width: 100% !important;
+		}
+	}
+}
+
+table.products__action {
+	width: 210px;
 }
