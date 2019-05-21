@@ -1,0 +1,24 @@
+.social {
+	width: auto !important;
+
+	&__blank {
+		@extend %blank;
+		width: 10px !important;
+	}
+
+	&__cell {
+		&--blank {
+			vertical-align: middle !important;
+			width: 10px;
+		}
+	}
+
+	&__link,
+	&__image {
+		display: block;
+	}
+
+	&__image {
+		max-width: none;
+	}
+}

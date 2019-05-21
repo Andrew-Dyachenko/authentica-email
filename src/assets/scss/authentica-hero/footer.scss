@@ -1,0 +1,83 @@
+.footer {
+	$footer: &;
+
+	.logo {
+		&__top,
+		&__bottom {
+			font-size: 18px !important;
+		}
+	}
+
+	.phones {
+		.spacer td {
+			line-height: 11px;
+			font-size: 11px;
+			height: 11px;
+		}
+
+		&__link {
+			color: $black;
+			font-weight: 300;
+			letter-spacing: normal;
+		}
+	}
+
+	&__feedback {
+		&-title {
+			margin-bottom: 0;
+			margin-top: 0;
+			font-size: 15px;
+		}
+	}
+
+	&__cell {
+		&[class*=_blank] {
+			width: 25px;
+			vertical-align: middle;
+
+			&:first-child,
+			&:last-child {
+				width: 30px;
+
+				#{$footer} {
+					&__blank {
+						width: 30px;
+					}
+				}
+			}
+		}
+		&_blank {
+			&_3 {
+				width: 18px !important;
+			}
+		}
+
+		@media (max-width: $global-breakpoint) {
+			display: block !important;
+		}
+	}
+
+	&__email {
+		font-size: 14px;
+		color: $black;
+		letter-spacing: normal;
+		font-weight: 300;
+	}
+
+	&__paragraph {
+		color: $dusty-gray;
+		font-size: 12px;
+		margin-top: 0;
+		margin-bottom: 0;
+		line-height: (15 / 12);
+	}
+
+	&__unsubscribe {
+		color: $dusty-gray;
+		text-decoration: underline;
+
+		&:visited {
+			color: $dusty-gray;
+		}
+	}
+}

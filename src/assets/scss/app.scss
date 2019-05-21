@@ -18,8 +18,9 @@
 
 %text {
 	margin: 0 !important;
-	letter-spacing: 1.7px;
+	letter-spacing: 2px;
 	line-height: (16 / 14);
+	font-weight: 300;
 }
 
 %button {
@@ -28,7 +29,13 @@
 		background: $sandal !important;
 		border-color: $sandal !important;
 		font-size: 10px !important;
-		letter-spacing: 1.7px;
+		letter-spacing: 2px;
 		text-align: center !important;
+		font-weight: 400 !important;
+
+		a {
+			letter-spacing: 2px;
+			font-weight: 400 !important;
+		}
 	}
 }
