@@ -1,17 +1,17 @@
 .forehead {
 	&__title {
 		font-weight: 400;
-		font-family: $body-font-family;
+		font-family: $body-font-family !important;
 		font-size: 25px;
 		line-height: (30 / 25);
-		text-align: center;
+		text-align: center !important;
 		letter-spacing: 2px;
 		text-transform: uppercase;
-		color: $radical-red;
+		color: $radical-red !important;
 		margin: 0 !important;
 
 		strong {
-			font-size: inherit;
+			font-size: 25px;
 			font-weight: 700;
 		}
 
@@ -28,9 +28,5 @@
 	&__text {
 		@extend %text;
 		text-align: center;
-	}
-
-	&__br {
-		@extend %l-visible;
 	}
 }

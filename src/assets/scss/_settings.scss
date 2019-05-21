@@ -59,7 +59,7 @@ $container-radius: 0;
 // 3. Block Grid
 // -------------
 
-$block-grid-max: 8;
+$block-grid-max: 12;
 $block-grid-gutter: $global-gutter;
 
 // 4. Typography
@@ -92,9 +92,9 @@ $subheader-color: $dark-gray;
 $subheader-font-weight: $global-font-weight;
 $subheader-margin-top: 4px;
 $subheader-margin-bottom: 8px;
-$hr-width: $global-width;
+$hr-width: $global-width - 60;
 $hr-border: 1px solid $black;
-$hr-margin: 20px auto;
+$hr-margin: 0 auto;
 $anchor-text-decoration: none;
 $anchor-color: $primary-color;
 $anchor-color-visited: $anchor-color;

@@ -1,6 +1,24 @@
 .logo {
+	display: inline-block;
+	vertical-align: top;
+	text-decoration: none;
+	letter-spacing: -1px;
+	font-size: 0;
+	line-height: 0;
+
+	&__space {
+		display: none;
+		font-size: 4px !important;
+
+		@media (max-width: $s) {
+			display: inline !important;
+		}
+	}
+
 	&__top,
 	&__bottom {
+		text-decoration: none;
+		letter-spacing: normal;
 		color: $black-russian;
 		font-size: 35px;
 		letter-spacing: -.5px;
@@ -9,7 +27,11 @@
 		overflow: hidden;
 
 		@media (max-width: $s) {
-			display: inline-block;;
+			display: inline-block;
+		}
+
+		@media (max-width: $global-breakpoint) {
+			font-size: 27px !important;
 		}
 	}
 

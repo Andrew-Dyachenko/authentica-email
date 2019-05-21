@@ -1,51 +1,73 @@
 <container class="container--footer">
 	<spacer size="20"></spacer>
-	<table class="footer">
-		<tbody class="footer__tbody">
-			<tr class="footer__row">
-				<th class="footer__cell footer__cell_blank_1">
-					<img src="./../assets/img/blank.gif" alt="Blank gif" width="30" height="1" class="footer__blank">
+	<table class="container-addon">
+		<tbody class="container-addon__tbody">
+			<tr class="container-addon__tr">
+				<th class="container-addon__cell">
+					<img src="{{blankImg}}{{blankImgRemote}}" width="30" height="1" class="container-addon__blank" alt="Blank gif">
 				</th>
-				<th class="footer__cell footer__cell--logo">
-					<spacer size="2" class="l-visible"></spacer>
-					{{> logo }}
-					<spacer size="25"></spacer>
-					{{> social }}
+				<th class="container-addon__cell">
+					<table class="footer">
+						<tbody class="footer__tbody">
+							<tr class="footer__row">
+								<th class="footer__cell">
+									<row class="footer__transformer">
+										<tbody class="footer__transformer-tbody">
+											<tr class="footer__transformer-row">
+												<th class="footer__transformer-cell footer__transformer-cell--logoAndSocial">
+													<spacer size="2" class="show-for-large"></spacer>
+													{{> logo }}
+													<spacer size="25" class="footer__underlogo footer__underlogo--1"></spacer>
+													<spacer size="20" class="footer__underlogo footer__underlogo--2"></spacer>
+													{{> social }}
+													<spacer size="25" class="footer__undersocial footer__undersocial--1"></spacer>
+													<spacer size="20" class="footer__undersocial footer__undersocial--2"></spacer>
+												</th>
+												<th class="footer__transformer-cell footer__transformer-cell--blank">
+													<img src="{{blankImg}}{{blankImgRemote}}" alt="Blank gif" width="25" height="1" class="footer__transformer-blank">
+												</th>
+												<th class="footer__transformer-cell">
+													<h5 class="footer__feedback-title">
+														НУЖНА ПОМОЩЬ?
+													</h5>
+													<spacer size="12"></spacer>
+													<div class="phones">
+														<div class="phones__item">
+															<a href="tel:+74957772090" class="phones__link">(495) 777-20-90</a>
+														</div>
+														<spacer size="11"></spacer>
+														<div class="phones__item">
+															<a href="tel:78007772090" class="phones__link">(800) 777-20-90</a>
+														</div>
+													</div>
+													<spacer size="11"></spacer>
+													<div class="footer__email-wrapper">
+														<a href="mailto:service@authentica.love" class="footer__email">
+															service@authentica.love
+														</a>
+													</div>
+												</th>
+											</tr>
+										</tbody>
+									</row>
+								</th>
+								<th class="footer__cell footer__cell_blank_1">
+									<img src="{{blankImg}}{{blankImgRemote}}" alt="Blank gif" width="18" height="1" class="footer__blank">
+								</th>
+								<th class="footer__cell footer__cell--spacer">
+									<spacer size="14"></spacer>
+								</th>
+								<th class="footer__cell footer__cell--paragraph">
+									<p class="footer__paragraph">
+										Вы получили это письмо, так как подписались на рассылку сайта authentica.love с целью получения информации о новых продуктах, сезонных тенденциях и эксклюзивных предложениях. Если вы больше не хотите получать подобные письма, пожалуйста, нажмите <a href="#" target="_blank" class="footer__unsubscribe">отписаться от рассылки.</a>
+									</p>
+								</th>
+							</tr>
+						</tbody>
+					</table>
 				</th>
-				<th class="footer__cell footer__cell_blank_2">
-					<img src="./../assets/img/blank.gif" alt="Blank gif" width="30" height="1" class="footer__blank">
-				</th>
-				<th class="footer__cell footer__cell--feedback">
-					<h5 class="footer__feedback-title">
-						НУЖНА ПОМОЩЬ?
-					</h5>
-					<spacer size="12"></spacer>
-					<div class="phones">
-						<div class="phones__item">
-							<a href="tel:+74957772090" class="phones__link">(495) 777-20-90</a>
-						</div>
-						<spacer size="11"></spacer>
-						<div class="phones__item">
-							<a href="tel:78007772090" class="phones__link">(800) 777-20-90</a>
-						</div>
-					</div>
-					<spacer size="11"></spacer>
-					<div class="footer__email-wrapper">
-						<a href="mailto:service@authentica.love" class="footer__email">
-							service@authentica.love
-						</a>
-					</div>
-				</th>
-				<th class="footer__cell footer__cell_blank_3">
-					<img src="./../assets/img/blank.gif" alt="Blank gif" width="18" height="1" class="footer__blank">
-				</th>
-				<th class="footer__cell footer__cell--paragraph">
-					<p class="footer__paragraph">
-						Вы получили это письмо, так как подписались на рассылку сайта authentica.love с целью получения информации о новых продуктах, сезонных тенденциях и эксклюзивных предложениях. Если вы больше не хотите получать подобные письма, пожалуйста, нажмите <a href="#" target="_blank" class="footer__unsubscribe">отписаться от рассылки.</a>
-					</p>
-				</th>
-				<th class="footer__cell footer__cell_blank_4">
-					<img src="./../assets/img/blank.gif" alt="Blank gif" width="30" height="1" class="footer__blank">
+				<th class="container-addon__cell">
+					<img src="{{blankImg}}{{blankImgRemote}}" width="30" height="1" class="container-addon__blank" alt="Blank gif">
 				</th>
 			</tr>
 		</tbody>

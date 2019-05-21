@@ -5,6 +5,19 @@
 		&__top,
 		&__bottom {
 			font-size: 18px !important;
+			@media (max-width: $s) {
+				display: inline-block !important;
+			}
+		}
+
+		@media (max-width: $s) {
+			white-space: nowrap;
+		}
+	}
+
+	.social {
+		@media (max-width: $s) {
+			margin: 0 auto;
 		}
 	}
 
@@ -27,6 +40,10 @@
 			margin-bottom: 0;
 			margin-top: 0;
 			font-size: 15px;
+
+			@media (max-width: $s) {
+				text-align: center !important;
+			}
 		}
 	}
 
@@ -34,20 +51,9 @@
 		&[class*=_blank] {
 			width: 25px;
 			vertical-align: middle;
-
-			&:first-child,
-			&:last-child {
-				width: 30px;
-
-				#{$footer} {
-					&__blank {
-						width: 30px;
-					}
-				}
-			}
 		}
 		&_blank {
-			&_3 {
+			&_1 {
 				width: 18px !important;
 			}
 		}
@@ -64,6 +70,12 @@
 		font-weight: 300;
 	}
 
+	&__email-wrapper {
+		@media (max-width: $s) {
+			text-align: center !important;
+		}
+	}
+
 	&__paragraph {
 		color: $dusty-gray;
 		font-size: 12px;
@@ -78,6 +90,57 @@
 
 		&:visited {
 			color: $dusty-gray;
+		}
+	}
+
+	&__transformer {
+		&-cell {
+			&--blank {
+				width: 25px;
+				vertical-align: middle;
+			}
+			&--logoAndSocial {
+				@media (max-width: $global-breakpoint) {
+					width: 38%;
+				}
+				@media (max-width: $s) {
+					width: auto;
+					text-align: center !important;
+				}
+			}
+			@media (max-width: $s) {
+				display: block !important;
+			}
+		}
+		&-blank {
+			@extend %blank;
+			width: 25px !important;
+		}
+	}
+
+	&__spacer {
+		@extend %hidden;
+
+		@media (max-width: $global-breakpoint) {
+			display: block!important;
+			width: auto !important;
+			mso-hide: none !important;
+			overflow: visible !important;
+		}
+	}
+
+	&__underlogo,
+	&__undersocial {
+		&--1 {
+			@media (max-width: $s) {
+				display: none !important;
+			}
+		}
+		&--2 {
+			display: none;
+			@media (max-width: $s) {
+				display: table !important;
+			}
 		}
 	}
 }

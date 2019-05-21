@@ -5,7 +5,8 @@
 		}
 	}
 	&__link {
-		color: $dusty-gray;
+		text-decoration: none;
+		color: $dusty-gray !important;
 		text-decoration: none;
 		letter-spacing: -.3333px;
 	}

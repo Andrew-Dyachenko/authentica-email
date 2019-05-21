@@ -10,10 +10,11 @@
 	max-width: none;
 }
 
-%l-visible {
-	@media (max-width: $global-breakpoint) {
-		display: none;
-	}
+%hidden {
+	display: none!important;
+	width: 0;
+	mso-hide: all;
+	overflow: hidden;
 }
 
 %text {
