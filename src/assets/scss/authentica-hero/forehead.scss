@@ -1,32 +1,34 @@
+@use 'sass:math';
+
 .forehead {
-	&__title {
-		font-weight: 400;
-		font-family: $body-font-family !important;
-		font-size: 25px;
-		line-height: (30 / 25);
-		text-align: center !important;
-		letter-spacing: 2px;
-		text-transform: uppercase;
-		color: $radical-red !important;
-		margin: 0 !important;
 
-		strong {
-			font-size: 25px;
-			font-weight: 700;
-		}
+  &__title {
+    margin: 0 !important;
+    font-family: $body-font-family !important;
+    font-size: 25px;
+    font-weight: 400;
+    line-height: math.div(30, 25);
+    text-align: center !important;
+    color: $radical-red !important;
+    text-transform: uppercase;
+    letter-spacing: 2px;
 
-		@media (max-width: $global-breakpoint) {
-			font-size: ((15 + 25) / 2) + px !important;
-			font-size: calc(0.9375rem + ((1vw - 3.6px) * 3.6765)) !important;
-		}
+    strong {
+      font-size: 25px;
+      font-weight: 700;
+    }
 
-		@media (max-width: $s) {
-			font-size: 15px !important;
-		}
-	}
+    @media (max-width: $global-breakpoint) {
+      font-size: calc(.9375rem + ((1vw - 3.6px) * 3.6765)) !important;
+    }
 
-	&__text {
-		@extend %text;
-		text-align: center;
-	}
+    @media (max-width: $s) {
+      font-size: 15px !important;
+    }
+  }
+
+  &__text {
+    @extend %text;
+    text-align: center;
+  }
 }

@@ -1,148 +1,167 @@
+@use 'sass:math';
+
 .footer {
-	$footer: &;
+  $footer: &;
 
-	.logo {
-		&__top,
-		&__bottom {
-			font-size: 18px !important;
-			@media (max-width: $s) {
-				display: inline-block !important;
-			}
-		}
+  .logo {
 
-		@media (max-width: $s) {
-			white-space: nowrap;
-		}
-	}
+    &__top,
+    &__bottom {
+      font-size: 18px !important;
 
-	.social {
-		@media (max-width: $s) {
-			margin: 0 auto;
-		}
-	}
+      @media (max-width: $s) {
+        display: inline-block !important;
+      }
+    }
 
-	.phones {
-		.spacer td {
-			line-height: 11px;
-			font-size: 11px;
-			height: 11px;
-		}
+    @media (max-width: $s) {
+      white-space: nowrap;
+    }
+  }
 
-		&__link {
-			color: $black;
-			font-weight: 300;
-			letter-spacing: normal;
-		}
-	}
+  .social {
+    @media (max-width: $s) {
+      margin: 0 auto;
+    }
+  }
 
-	&__feedback {
-		&-title {
-			margin-bottom: 0;
-			margin-top: 0;
-			font-size: 15px;
+  .phones {
 
-			@media (max-width: $s) {
-				text-align: center !important;
-			}
-		}
-	}
+    .spacer td {
+      height: 11px;
+      font-size: 11px;
+      line-height: 11px;
+    }
 
-	&__cell {
-		&[class*=_blank] {
-			width: 25px;
-			vertical-align: middle;
-		}
-		&_blank {
-			&_1 {
-				width: 18px !important;
-			}
-		}
+    &__link {
+      font-weight: 300;
+      color: $black;
+      letter-spacing: normal;
+    }
+  }
 
-		@media (max-width: $global-breakpoint) {
-			display: block !important;
-		}
-	}
+  &__feedback {
 
-	&__email {
-		font-size: 14px;
-		color: $black;
-		letter-spacing: normal;
-		font-weight: 300;
-		white-space: nowrap;
-	}
+    &-title {
+      margin-top: 0;
+      margin-bottom: 0;
+      font-size: 15px;
 
-	&__email-wrapper {
-		white-space: nowrap;
-		@media (max-width: $s) {
-			text-align: center !important;
-		}
-	}
+      @media (max-width: $s) {
+        text-align: center !important;
+      }
+    }
+  }
 
-	&__paragraph {
-		color: $dusty-gray;
-		font-size: 12px;
-		margin-top: 0;
-		margin-bottom: 0;
-		line-height: (15 / 12);
-	}
+  &__cell {
 
-	&__unsubscribe {
-		color: $dusty-gray;
-		text-decoration: underline;
+    &[class*='_blank'] {
+      width: 25px;
+      vertical-align: middle;
+    }
 
-		&:visited {
-			color: $dusty-gray;
-		}
-	}
+    &_blank {
 
-	&__transformer {
-		&-cell {
-			&--blank {
-				width: 25px;
-				vertical-align: middle;
-			}
-			&--logoAndSocial {
-				@media (max-width: $global-breakpoint) {
-					width: 38%;
-				}
-				@media (max-width: $s) {
-					width: auto;
-					text-align: center !important;
-				}
-			}
-			@media (max-width: $s) {
-				display: block !important;
-			}
-		}
-		&-blank {
-			@extend %blank;
-			width: 25px !important;
-		}
-	}
+      &_1 {
+        width: 18px !important;
+      }
+    }
 
-	&__spacer {
-		@extend %hidden;
+    @media (max-width: $global-breakpoint) {
+      display: block !important;
+    }
+  }
 
-		@media (max-width: $global-breakpoint) {
-			display: block!important;
-			width: auto !important;
-			mso-hide: none !important;
-			overflow: visible !important;
-		}
-	}
+  &__email {
+    font-size: 14px;
+    font-weight: 300;
+    color: $black;
+    letter-spacing: normal;
+    white-space: nowrap;
+  }
 
-	&__underlogo,
-	&__undersocial {
-		&--1 {
-			@media (max-width: $s) {
-				display: none !important;
-			}
-		}
-		&--2 {
-			display: none;
-			@media (max-width: $s) {
-				display: table !important;
-			}
-		}
-	}
+  &__email-wrapper {
+    white-space: nowrap;
+
+    @media (max-width: $s) {
+      text-align: center !important;
+    }
+  }
+
+  &__paragraph {
+    margin-top: 0;
+    margin-bottom: 0;
+    font-size: 12px;
+    line-height: math.div(15, 12);
+    color: $dusty-gray;
+  }
+
+  &__unsubscribe {
+    color: $dusty-gray;
+    text-decoration: underline;
+
+    &:visited {
+      color: $dusty-gray;
+    }
+  }
+
+  &__transformer {
+
+    &-cell {
+
+      &--blank {
+        width: 25px;
+        vertical-align: middle;
+      }
+
+      &--logoAndSocial {
+        @media (max-width: $global-breakpoint) {
+          width: 38%;
+        }
+
+        @media (max-width: $s) {
+          width: auto;
+          text-align: center !important;
+        }
+      }
+
+      @media (max-width: $s) {
+        display: block !important;
+      }
+    }
+
+    &-blank {
+      @extend %blank;
+      width: 25px !important;
+    }
+  }
+
+  &__spacer {
+    @extend %hidden;
+
+    @media (max-width: $global-breakpoint) {
+      display: block !important;
+      width: auto !important;
+      overflow: visible !important;
+      mso-hide: none !important;
+    }
+  }
+
+  &__underlogo,
+  &__undersocial {
+
+    &--1 {
+      @media (max-width: $s) {
+        display: none !important;
+      }
+    }
+
+    &--2 {
+      display: none;
+
+      @media (max-width: $s) {
+        display: table !important;
+      }
+    }
+  }
 }

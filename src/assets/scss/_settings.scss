@@ -27,6 +27,8 @@ $s: 360px - 1;
 // 1. Global
 // ---------
 
+@use 'sass:color';
+
 $primary-color: #2199e8;
 $secondary-color: #777777;
 $success-color: #3adb76;
@@ -35,16 +37,16 @@ $alert-color: #ec5840;
 $light-gray: #f3f3f3;
 $medium-gray: #cacaca;
 $dark-gray: #8a8a8a;
-$black: #000;
-$white: #fff;
+$black: #0a0a0a;
+$white: #fefefe;
 $pre-color: #ff6908;
 $global-width: 600px;
 $global-width-small: 95%;
-$global-gutter: 30px;
-$body-background: $mercury;
+$global-gutter: 16px;
+$body-background: $light-gray;
 $container-background: $white;
-$global-padding: 15px;
-$global-margin: 15px;
+$global-padding: 16px;
+$global-margin: 16px;
 $global-radius: 3px;
 $global-rounded: 500px;
 $global-breakpoint: ($global-width + $global-padding * 2) - 1;
@@ -53,24 +55,24 @@ $global-breakpoint: ($global-width + $global-padding * 2) - 1;
 // -------
 
 $grid-column-count: 12;
-$column-padding-bottom: 0;
+$column-padding-bottom: $global-padding;
 $container-radius: 0;
 
 // 3. Block Grid
 // -------------
 
-$block-grid-max: 12;
+$block-grid-max: 8;
 $block-grid-gutter: $global-gutter;
 
 // 4. Typography
 // -------------
 
 $global-font-color: $black;
-$body-font-family: 'PF Agora Sans Pro', Helvetica, Arial, sans-serif;
+$body-font-family: helvetica, arial, sans-serif;
 $global-font-weight: normal;
 $header-color: inherit;
-$global-line-height: 16 / 14;
-$global-font-size: 14px;
+$global-line-height: 1.3;
+$global-font-size: 16px;
 $body-line-height: $global-line-height;
 $header-font-family: $body-font-family;
 $header-font-weight: $global-font-weight;
@@ -92,13 +94,13 @@ $subheader-color: $dark-gray;
 $subheader-font-weight: $global-font-weight;
 $subheader-margin-top: 4px;
 $subheader-margin-bottom: 8px;
-$hr-width: $global-width - 60;
+$hr-width: $global-width;
 $hr-border: 1px solid $black;
-$hr-margin: 0 auto;
+$hr-margin: 20px;
 $anchor-text-decoration: none;
 $anchor-color: $primary-color;
 $anchor-color-visited: $anchor-color;
-$anchor-color-hover: darken($primary-color, 10%);
+$anchor-color-hover: color.adjust($primary-color, $lightness: -10%);
 $anchor-color-active: $anchor-color-hover;
 $stat-font-size: 40px;
 
@@ -106,16 +108,16 @@ $stat-font-size: 40px;
 // ---------
 
 $button-padding: (
-	tiny: 4px 8px 4px 8px,
-	small: 5px 10px 5px 10px,
-	default: 8px 16px 8px 16px,
-	large: 10px 20px 10px 20px,
+  tiny: 4px 8px 4px 8px,
+  small: 5px 10px 5px 10px,
+  default: 8px 16px 8px 16px,
+  large: 10px 20px 10px 20px,
 );
 $button-font-size: (
-	tiny: 10px,
-	small: 12px,
-	default: 16px,
-	large: 20px,
+  tiny: 10px,
+  small: 12px,
+  default: 16px,
+  large: 20px,
 );
 $button-color: $white;
 $button-color-alt: $medium-gray;
@@ -133,26 +135,25 @@ $callout-background: $white;
 $callout-background-fade: 85%;
 $callout-padding: 10px;
 $callout-margin-bottom: $global-margin;
-$callout-border: 1px solid darken($callout-background, 20%);
-$callout-border-secondary: 1px solid darken($secondary-color, 20%);
-$callout-border-success: 1px solid darken($success-color, 20%);
-$callout-border-warning: 1px solid darken($warning-color, 20%);
-$callout-border-alert: 1px solid darken($alert-color, 20%);
+$callout-border: 1px solid color.adjust($callout-background, $lightness: -20%);
+$callout-border-secondary: 1px solid color.adjust($secondary-color, $lightness: -20%);
+$callout-border-success: 1px solid color.adjust($success-color, $lightness: -20%);
+$callout-border-warning: 1px solid color.adjust($warning-color, $lightness: -20%);
+$callout-border-alert: 1px solid color.adjust($alert-color, $lightness: -20%);
 
 // 7. Menu
 // -------
 
-$menu-item-padding: 17px;
-$menu-item-gutter: 15px;
-$menu-item-color: $black;
+$menu-item-padding: 10px;
+$menu-item-gutter: 10px;
+$menu-item-color: $primary-color;
 
 // 8. Thumbnail
 // ------------
 
 $thumbnail-border: solid 4px $white;
 $thumbnail-margin-bottom: $global-margin;
-$thumbnail-shadow: 0 0 0 1px rgba($black, 0.2);
-$thumbnail-shadow-hover: 0 0 6px 1px rgba($primary-color, 0.5);
+$thumbnail-shadow: 0 0 0 1px rgba($black, .2);
+$thumbnail-shadow-hover: 0 0 6px 1px rgba($primary-color, .5);
 $thumbnail-transition: box-shadow 200ms ease-out;
 $thumbnail-radius: $global-radius;
-

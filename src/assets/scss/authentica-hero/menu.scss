@@ -1,33 +1,38 @@
+@use 'sass:math';
+
 .menu,
 table.menu {
-	&--custom {
-		width: $global-width - $global-gutter * 2;
-		table {
-			margin: 0 auto !important;
-		}
-	}
 
-	&__item {
-		&--highlighted {
-			color: $radical-red;
+  &--custom {
+    width: $global-width - $global-gutter * 2;
 
-			a {
-				color: $radical-red  !important;
+    table {
+      margin: 0 auto !important;
+    }
+  }
 
-				&:visited {
-					color: $radical-red !important;
-				}
-			}
-		}
+  &__item {
 
-		a {
-			line-height: (14 / 17);
-			font-size: 14px !important;
-			text-decoration: none !important;
-		}
-	}
+    &--highlighted {
+      color: $radical-red;
 
-	@media (max-width: $global-breakpoint) {
-		display: none;
-	}
+      a {
+        color: $radical-red !important;
+
+        &:visited {
+          color: $radical-red !important;
+        }
+      }
+    }
+
+    a {
+      font-size: 14px !important;
+      line-height: math.div(14, 17);
+      text-decoration: none !important;
+    }
+  }
+
+  @media (max-width: $global-breakpoint) {
+    display: none;
+  }
 }

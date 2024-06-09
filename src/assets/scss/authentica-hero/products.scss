@@ -1,71 +1,76 @@
+@use 'sass:math';
+
 .products {
-	&__media {
-		th {
-			vertical-align: middle;
-			text-align: center !important;
-			height: 236px;
-		}
 
-		&-link {
-			display: inline-block;
-			vertical-align: middle;
-		}
+  &__media {
 
-		&-image {
-			display: block;
-		}
-	}
+    &-link {
+      display: inline-block;
+      vertical-align: middle;
+    }
 
-	&__name {
-		line-height: (16 / 14);
+    &-image {
+      display: block;
+    }
 
-		&-link {
-			color: $sandal;
+    th {
+      height: 236px;
+      vertical-align: middle;
+      text-align: center !important;
+    }
+  }
 
-			&:visited {
-				color: $sandal;
-			}
-		}
-	}
+  &__name {
+    line-height: math.div(16, 14);
 
-	&__shortsay {
-		color: $black;
-		font-size: 14px;
-		line-height: (16 / 14);
-	}
+    &-link {
+      color: $sandal;
 
-	&__infoblock {
-		> table {
-			table-layout: fixed;
-		}
-	}
+      &:visited {
+        color: $sandal;
+      }
+    }
+  }
 
-	&__price {
-		color: $black;
-		letter-spacing: .3333px;
-	}
+  &__shortsay {
+    font-size: 14px;
+    line-height: math.div(16, 14);
+    color: $black;
+  }
 
-	&__description {
-		color: $dusty-gray;
-		font-size: 12px;
-		line-height: (15 / 12);
-	}
+  &__infoblock {
 
-	&__action {
-		@extend %button;
-		margin-bottom: 0;
-		width: 210px;
+    > table {
+      table-layout: fixed;
+    }
+  }
 
-		td td a {
-			text-transform: uppercase;
-		}
+  &__price {
+    color: $black;
+    letter-spacing: .3333px;
+  }
 
-		@media (max-width: $global-breakpoint) {
-			width: 100% !important;
-		}
-	}
+  &__description {
+    font-size: 12px;
+    line-height: math.div(15, 12);
+    color: $dusty-gray;
+  }
+
+  &__action {
+    @extend %button;
+    width: 210px;
+    margin-bottom: 0;
+
+    td td a {
+      text-transform: uppercase;
+    }
+
+    @media (max-width: $global-breakpoint) {
+      width: 100% !important;
+    }
+  }
 }
 
 table.products__action {
-	width: 210px;
+  width: 210px;
 }

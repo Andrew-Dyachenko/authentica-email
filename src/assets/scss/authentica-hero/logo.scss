@@ -1,53 +1,54 @@
+@use 'sass:math';
+
 .logo {
-	display: inline-block;
-	vertical-align: top;
-	text-decoration: none;
-	letter-spacing: -1px;
-	font-size: 0;
-	line-height: 0;
+  display: inline-block;
+  font-size: 0;
+  line-height: 0;
+  vertical-align: top;
+  text-decoration: none;
+  letter-spacing: -1px;
 
-	&__space {
-		display: none;
-		font-size: 4px !important;
+  &__space {
+    display: none;
+    font-size: 4px !important;
 
-		@media (max-width: $s) {
-			display: inline !important;
-		}
-	}
+    @media (max-width: $s) {
+      display: inline !important;
+    }
+  }
 
-	&__top,
-	&__bottom {
-		text-decoration: none;
-		letter-spacing: normal;
-		color: $black-russian;
-		font-weight: 300;
-		font-size: 35px;
-		letter-spacing: -.5px;
-		line-height: (27 / 35);
-		white-space: nowrap;
-		overflow: hidden;
+  &__top,
+  &__bottom {
+    overflow: hidden;
+    font-size: 35px;
+    font-weight: 300;
+    line-height: math.div(27, 35);
+    color: $black-russian;
+    text-decoration: none;
+    letter-spacing: -.5px;
+    white-space: nowrap;
 
-		@media (max-width: $s) {
-			display: inline-block;
-		}
+    @media (max-width: $s) {
+      display: inline-block;
+    }
 
-		@media (max-width: $global-breakpoint) {
-			font-size: 27px !important;
-		}
-	}
+    @media (max-width: $global-breakpoint) {
+      font-size: 27px !important;
+    }
+  }
 
-	&__bottom {
-		color: $radical-red;
-	}
+  &__bottom {
+    color: $radical-red;
+  }
 
-	&__spacer {
-		@media (max-width: $s) {
-			display: none;
-		}
-	}
+  &__spacer {
+    @media (max-width: $s) {
+      display: none;
+    }
+  }
 
-	@media (max-width: $s) {
-		text-align: center;
-		line-height: (27 / 35);
-	}
+  @media (max-width: $s) {
+    line-height: (27, 35);
+    text-align: center;
+  }
 }
